@@ -7,10 +7,10 @@ router.use(express.static('public'));
 router.use(express.urlencoded({extended:true}));
 
 var conn=mysql.createConnection({
-    host : 'localhost',
-    user : 'root',
-    password : 'root',
-    database : 'simone'
+    host : 'bc7y8x5cs7cxljbwlvbx-mysql.services.clever-cloud.com',
+    user : 'u9vvqnuhain82ppz',
+    password : 'LHdNqf3pOFLHrmZdQWsC',
+    database : 'bc7y8x5cs7cxljbwlvbx'
 })
 var exe=util.promisify(conn.query).bind(conn);
 
