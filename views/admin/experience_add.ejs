@@ -1,0 +1,48 @@
+<%- include('header.ejs') %>
+
+
+      <div class="main">
+        <header class="topbar">
+          <h2>Add experience record</h2>
+          <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+          <div class="panel">
+            <h3>experience form</h3>
+            <!-- <p class="hint">Static template only. Submit stays on this page.</p> -->
+
+            <form class="form" action="/admin/experience_save" method="post">
+              <div class="row">
+                <div class="field">
+                  <label for="name">experience Year</label>
+                  <input id="name" type="text" name="ex_year" placeholder="2004-2008" />
+                </div>
+                <div class="field">
+                  <label for="email">experience Degree Name</label>
+                  <input id="email" type="text" name="ex_title" placeholder="title......" />
+                </div>
+                 <div class="field">
+                  <label for="email">experience Company Name</label>
+                  <input id="email" type="text" name="ex_company" placeholder="title......" />
+                </div>
+              </div>
+              
+              
+
+              <div class="field">
+                <label for="notes">experience Description</label>
+                <textarea id="notes" name="ex_desc" placeholder="Short note..."></textarea>
+              </div>
+
+              <div class="actions">
+                <button class="btn" type="submit">Save</button>
+                <button class="btn btn-ghost" type="reset">Clear</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+<%- include('footer.ejs') %>
+

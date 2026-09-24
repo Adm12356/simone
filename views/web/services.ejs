@@ -1,0 +1,55 @@
+
+<%- include('header.ejs') %>
+
+
+ <section class="section section--alt" id="services">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-bg-title">Services</div>
+          <h2 class="section-title">What I Do?</h2>
+        </div>
+        <div class="services">
+          <% for(var i=0;i<service.length;i++){ %>
+          <article class="service">
+          <i class="<%= service[i].s_icon %>"></i>
+          <!-- <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 20h8"/></svg> -->
+          <h3><%= service[i].s_title %></h3>
+          <p><%= service[i].s_desc %></p>
+          </article>
+          <% } %>
+
+
+
+<!-- 
+          <article class="service">
+            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 20h8"/></svg>
+            <h3>Web Design</h3>
+            <p>Clean, responsive websites with a focus on clarity and conversion.</p>
+          </article>
+          <article class="service">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+            <h3>UI/UX Design</h3>
+            <p>Flows, wireframes, and interfaces that feel simple to use.</p>
+          </article>
+          <article class="service">
+            <svg viewBox="0 0 24 24"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>
+            <h3>App Design & Develop</h3>
+            <p>Product design and front-end builds for iOS, Android, and web.</p>
+          </article>
+          <article class="service">
+            <svg viewBox="0 0 24 24"><path d="M4 19V5M4 19h16M8 15l3-4 3 3 4-6"/></svg>
+            <h3>Business Analysis</h3>
+            <p>Requirements, scope, and delivery plans that keep projects on track.</p>
+          </article>
+          <article class="service">
+            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+            <h3>SEO Marketing</h3>
+            <p>Search-friendly structure and content so people can find your work.</p>
+          </article> -->
+        </div>
+      </div>
+    </section>
+
+
+
+<%- include('footer.ejs') %>

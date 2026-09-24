@@ -1,0 +1,41 @@
+<%- include('header.ejs') %>
+
+
+      <div class="main">
+        <header class="topbar">
+          <h2>Add experience record</h2>
+          <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+          <div class="panel">
+            <h3>experience form</h3>
+            <!-- <p class="hint">Static template only. Submit stays on this page.</p> -->
+
+            <form class="form" action="/admin/skill_save" method="post">
+              <div class="row">
+                <div class="field">
+                  <label for="name">Skill Name</label>
+                  <input id="name" type="text" name="sk_title" placeholder="title" />
+                </div>
+                <div class="field">
+                  <label >Skill rating</label>
+                  <input id="email" type="text" name="sk_rating" placeholder="rating......" />
+                </div>
+              </div>
+              
+              
+
+             
+
+              <div class="actions">
+                <button class="btn" type="submit">Save</button>
+                <button class="btn btn-ghost" type="reset">Clear</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+<%- include('footer.ejs') %>
+

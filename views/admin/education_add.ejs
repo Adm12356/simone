@@ -1,0 +1,48 @@
+<%- include('header.ejs') %>
+
+
+      <div class="main">
+        <header class="topbar">
+          <h2>Add Education record</h2>
+          <div class="user">Welcome, Admin</div>
+        </header>
+
+        <section class="content">
+          <div class="panel">
+            <h3>Education form</h3>
+            <!-- <p class="hint">Static template only. Submit stays on this page.</p> -->
+
+            <form class="form" action="/admin/education_save" method="post">
+              <div class="row">
+                <div class="field">
+                  <label for="name">Education Year</label>
+                  <input id="name" type="text" name="e_year" placeholder="2004-2008" />
+                </div>
+                <div class="field">
+                  <label for="email">Education Degree Name</label>
+                  <input id="email" type="text" name="e_title" placeholder="title......" />
+                </div>
+                 <div class="field">
+                  <label for="email">Education University Name</label>
+                  <input id="email" type="text" name="e_university" placeholder="title......" />
+                </div>
+              </div>
+              
+              
+
+              <div class="field">
+                <label for="notes">Education Description</label>
+                <textarea id="notes" name="e_desc" placeholder="Short note..."></textarea>
+              </div>
+
+              <div class="actions">
+                <button class="btn" type="submit">Save</button>
+                <button class="btn btn-ghost" type="reset">Clear</button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </div>
+<%- include('footer.ejs') %>
+

@@ -1,0 +1,81 @@
+
+<%- include('header.ejs') %>
+
+
+ <section class="section" id="resume">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-bg-title">Summary</div>
+          <h2 class="section-title">Resume</h2>
+        </div>
+        <div class="resume-cols">
+          <div>
+            <h3>My Education</h3>
+            <% for(var i=0;i<education.length;i++){ %>
+            <article class="timeline-card">
+              <span class="badge"><%= education[i].e_year %></span>
+              <h4><%= education[i].e_title %></h4>
+              <div class="place"><%= education[i].e_university %></div>
+              <p><%= education[i].e_desc %></p>
+            </article>
+            <% } %>
+
+            <!-- <article class="timeline-card">
+              <span class="badge">2005 - 2008</span>
+              <h4>Bachelor Degree</h4>
+              <div class="place">University of California</div>
+              <p>Design thinking, interaction, and digital product coursework.</p>
+            </article>
+            <article class="timeline-card">
+              <span class="badge">2009 - 2012</span>
+              <h4>Master Degree</h4>
+              <div class="place">Harvard University</div>
+              <p>Advanced research in human-computer interaction and branding.</p>
+            </article> -->
+          </div>
+          <div>
+            <h3>My Experience</h3>
+            <% for(var i=0;i<experience.length;i++){ %>
+            <article class="timeline-card">
+              <span class="badge"><%= experience[i].ex_year %></span>
+              <h4><%= experience[i].ex_title %></h4>
+              <div class="place"><%= experience[i].ex_company %></div>
+              <p><%= experience[i].ex_desc %></p>
+            </article>
+            <% } %>
+
+            <!-- <article class="timeline-card">
+              <span class="badge">2014 - 2016</span>
+              <h4>Jr. Product Designer</h4>
+              <div class="place">Dribbble</div>
+              <p>Shipped marketing sites and app screens with design systems.</p>
+            </article>
+            <article class="timeline-card">
+              <span class="badge">2017 - 2019</span>
+              <h4>Product Designer</h4>
+              <div class="place">Adobe</div>
+              <p>Led end-to-end design for tools used by creative teams.</p>
+            </article> -->
+          </div>
+        </div>
+        <div class="skills">
+            <h3>My Skills</h3>
+            <% for(var i = 0; i<skill.length; i++){ %>
+            <div class="skills-grid">
+                <div class="skill">
+                    <header>
+                        <span><%= skill[i].sk_title %></span>
+                        <span><%= skill[i].sk_rating %>/100</span>
+                    </header>
+                    <div class="bar">
+                        <span style="width: <%= skill[i].sk_rating  %>%"></span>
+                    </div>
+                </div>
+            </div>
+            <% } %>
+        </div>
+      </div>
+  </section>
+
+
+<%- include('footer.ejs') %>
