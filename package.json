@@ -5,5 +5,8 @@
     "express-fileupload": "^1.5.2",
     "express-session": "^1.19.0",
     "mysql2": "^3.24.4"
+  },
+    "scripts":{
+    "start":"node server.js"
   }
 }
